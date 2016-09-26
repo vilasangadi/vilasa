@@ -1,0 +1,77 @@
+public class EmplyoeeDemo {
+
+	
+	public static void main(String[] args) {
+		float gross,netSalary;
+Employee xyz=new Employee(200,"vinayak",200000,(0.46f*2000f));
+Employee xxx=new Employee(201,"vinay",20000,(0.46f*2000f));
+Employee zzz=new Employee(202,"vilas",25000,(0.46f*2000f));
+calNetSalary(xyz.fEmpBasicSalary,xyz.fAllowance);
+System.out.println("Id-"+xyz.iEmpId+"Basic-"+xyz.fEmpBasicSalary+"Allowance-"+xyz.fAllowance);
+
+calNetSalary(xxx.fEmpBasicSalary,xxx.fAllowance);
+System.out.println("Id-"+xxx.iEmpId+"Basic-"+xxx.fEmpBasicSalary+"Allowance-"+xxx.fAllowance);
+calNetSalary(zzz.fEmpBasicSalary,zzz.fAllowance);
+System.out.println("Id-"+zzz.iEmpId+"Basic-"+zzz.fEmpBasicSalary+"Allowance-"+zzz.fAllowance);
+public static void calNetSalary(float Basic,float Allowance)
+{ float gross, netSalary;
+gross=Allowance+Basic;
+
+}
+
+
+		if(gross<5000)
+			netsalary=gross;
+		else if(gross>=5000 && gross<=10000)
+			netsalary=gross-(0.1f*gross);
+		else if(gross>10000 && gross<=20000)
+			netsalary=gross-(0.2f*gross);
+		else 
+			netsalary=gross-(0.3f*gross);
+			
+		
+		
+	}
+
+}
+public class Employee {
+
+	int iEmpID;
+	String iEmpName;
+	float fEmpBsaicSalary;
+	float fAllowance;
+	
+	
+	public int getiEmpID() {
+		return iEmpID;
+	}
+	public Employee(int iEmpID, String iEmpName, float fEmpBsaicSalary,
+			float fAllowance) {
+		super();
+		this.iEmpID = iEmpID;
+		this.iEmpName = iEmpName;
+		this.fEmpBsaicSalary = fEmpBsaicSalary;
+		this.fAllowance = fAllowance;
+	}
+	public String getiEmpName() {
+		return iEmpName;
+	}
+	public void setiEmpName(String iEmpName) {
+		this.iEmpName = iEmpName;
+	}
+	public float getfEmpBsaicSalary() {
+		return fEmpBsaicSalary;
+	}
+	public void setfEmpBsaicSalary(float fEmpBsaicSalary) {
+		this.fEmpBsaicSalary = fEmpBsaicSalary;
+	}
+	public float getfAllowance() {
+		return fAllowance;
+	}
+	public void setfAllowance(float fAllowance) {
+		this.fAllowance = fAllowance;
+	}
+	public void setiEmpID(int iEmpID) {
+		this.iEmpID = iEmpID;
+	}
+}

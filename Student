@@ -1,0 +1,127 @@
+class student {
+int studid;
+String stname;
+int marks1;
+int marks2;
+int marks3;
+int semester;
+String stream;
+int sum;
+static String collegename;
+void initialise(int id,String studname,int m1,int m2,int m3,String branch,String collname,int sem){
+	studid=id;
+	stname=studname;
+	marks1=m1;
+	marks2=m2;
+	marks3=m3;
+	semester=sem;
+	stream=branch;
+	this.collegename=collname;
+}
+void initialise (int sum){
+	this.sum=sum;
+}
+	
+	
+	
+
+void display(){
+	if(stream.equalsIgnoreCase("CSE"))
+	{
+		System.out.println("Name="+stname,"Id="+studid);
+	}
+	else if(stream.equalsIgnoreCase("ISE"))
+	{
+		System.out.println("Name="+stname,"Id="+studid);
+		
+	}
+	else if(stream.equalsIgnoreCase("MCA"))
+	{
+		System.out.println("Name="+stname,"Id="+studid);
+	}
+	System.out.println("College name is:BVB");
+	
+	
+}
+	void printstud(){
+		System.out.println("Name="+stname+", student ID="+studid,"College="+collName,"Semester="+sem);
+		
+		
+	}
+ void printstudent(student s){
+	   System.out.println("Name="+s.stname+"student ID="+s.studid+"College="+s.collName,"Semester="+s.sem,"Stream="+s.branch)
+
+	
+	
+	
+	}
+public class details {
+	
+
+if (CSE){
+	System.out.println("marKs1=","marks2=","marks3=");
+}
+else if(ISE){
+	System.out.println("marks1=",marks2=","marks3=");
+}
+else if(MCA)
+{
+	System.out.println("marks=","marks2=","marks3=");
+	
+}
+return sum;
+}
+
+	
+  
+		
+		
+		
+	
+	
+	
+	
+	
+	
+
+	
+
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+Scanner sc=new Scanner(System.in);
+student[] o =new student[10];
+
+for(int i=1;i<10;i++)
+{
+	System.out.println("Enter the details of the student:");
+	int id=sc.nextInt();
+	String name=sc.next();
+	int sum=sc.nextInt(0);
+	int marks1='nextInt();
+	int marks2=nextInt();
+    int marks3=nextInt();
+	String stream=sc.next();
+	o[i]=new Student();
+	
+	
+			o[i].initialise(id, name, sum, marks1, marks2, marks3, stream)
+}
+for(int k=1;k<=10;k++){
+	int sum=o[k].marks1+o[k].marks2+o[k].marks3;
+	o[k]=initialise1(sum);
+}
+for (int j=1;j<=10;j++){
+	int sum=o[j].marks1+o[j].marks2+o[j].marks3;
+o[j].display ();
+}
+{
+System.out.println("enter the id of he student to view their details:");
+int id=nextInt();
+}	
+	
+		
+

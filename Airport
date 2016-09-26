@@ -1,0 +1,157 @@
+public class Checks {
+	private float fBaggage_Amt;
+	private int iExpiry_Year;
+	private boolean bNOCStatus;
+	
+	public static int main(String[] args) 
+	{
+		public Checks(float fBaggage_Amt, int iExpiry_Year, boolean bNOCStatus) {
+			super();
+			this.fBaggage_Amt = fBaggage_Amt;
+			this.iExpiry_Year = iExpiry_Year;
+			this.bNOCStatus = bNOCStatus;
+			
+		public boolean checkBaggage(float fBaggage_Amt)
+		  if(fBaggage_Amt>=0&&fBaggage_Amt<=40)
+			  return true;
+		  else 
+			  return false;
+		
+		 if(iExpiry_Year>=02001&&iExpiry_Year<=2025)
+			  return true;
+		  else 
+			  return false;
+			
+			
+		}
+	}
+
+}
+public class Traveller 
+{
+
+	private int iTravellerID;
+	private String sTraveller;
+	private long lTraveller_con_info;
+	private float fBaggage_Amt;
+	private int iExpiry_Year;
+	private boolean bNOCStatus;
+
+
+
+
+
+
+
+
+	public int getiTravellerID() {
+		return iTravellerID;
+	}
+
+
+
+
+
+	public String getsTraveller() {
+		return sTraveller;
+	}
+
+
+
+
+
+	public long getlTraveller_con_info() {
+		return lTraveller_con_info;
+	}
+
+
+
+
+
+	public float getfBaggage_Amt() {
+		return fBaggage_Amt;
+	}
+
+
+
+
+
+	public int getiExpiry_Year() {
+		return iExpiry_Year;
+	}
+
+
+
+
+
+	public boolean isbNOCStatus() {
+		return bNOCStatus;
+	}
+
+
+
+
+
+	public Traveller(int iTravellerID, String sTraveller,
+			long lTraveller_con_info, float fBaggage_Amt, int iExpiry_Year,
+			boolean bnOCStatus) 
+	{
+		super();
+		this.iTravellerID = iTravellerID;
+		this.sTraveller = sTraveller;
+		this.lTraveller_con_info = lTraveller_con_info;
+		this.fBaggage_Amt = fBaggage_Amt;
+		this.iExpiry_Year = iExpiry_Year;
+		bNOCStatus = bnOCStatus;
+	}
+
+
+	
+
+
+	public int validateName(String sTravellerName)
+		{	int l;
+			l=sTravellerName.length();
+			if(l>4 && l<20)
+				return 1;
+			else 
+				return 0;
+		}
+	
+
+	public int validateContactinfo(long lTraveller_con_info)
+	{	long r;
+		r=lTraveller_con_info/1000000000;
+		if(r==7||r==8||r==9)
+			return 1;
+		
+		else 
+			return 0;
+	}
+	public void displayInformation(int iTravellerID,String sTravellerName,long lTraveller_con_info)
+	 	{
+			System.out.println("Traveller ID:"+iTravellerID);
+			System.out.println("Name:"+sTravellerName);
+			System.out.println("Contact:"+lTraveller_con_info);
+	 	}
+
+}
+public class TravellerDemo 
+{
+
+	
+	public static void main(String[] args) 
+	{ 	int i,j,m,n,o;
+		Checks c1=new Checks();
+		Traveller t1=new Traveller(46,"Rossy",9845043331l,56f,2011,true);
+		i=t1.validateName(t1.sTravellerName);
+		j=t1.validateContactinfo(t1.lTraveller_con_info);
+		t1.displayInformation(56,Vilas,8754654654l);
+		m=c1.checkBaggage(t1);
+		n=c1.checkImigration(t1);
+		o=c1.checkSecurity(t1);
+		if(i==1&&j==1&&m==1&&n==1&&o==1)
+			System.out.println("Allow Traveller");
+	}
+
+}

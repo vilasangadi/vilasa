@@ -1,0 +1,71 @@
+public interface Bank1
+{
+	public void deposit(double amount);
+	public void transfer(double amount);
+}
+
+public class SavingsBank1
+{
+	String name;
+	long acc_no;
+	double bal;
+	public SavingsBank1(String name,long acc_no, double bal)
+  {
+		super();
+		this.name = name;
+		this.acc_no = acc_no;
+		this.bal = bal;
+
+	}
+
+}
+public class ProvidentFund1
+{
+	String name;
+	long acc_no;
+	double bal;
+
+	public ProvidentFund1(String name, long acc_no, double bal)
+	{
+		super();
+		this.name = name;
+		this.acc_no = acc_no;
+		this.bal = bal;
+
+	}
+
+}
+public class SBI1 implements Bank1
+{
+	SavingsBank1 s=new SavingsBank1("Vilas",65652156l,10000);
+	ProvidentFund1 p=new ProvidentFund1("Vilas",65652156l,50000);
+	
+	public void transfer(double amount){
+		this.s.bal-=amount;
+		this.p.bal+=amount;
+	}
+	
+	public void withdraw(double amount){
+		this.s.bal-=amount;
+	}
+	
+		
+	public void deposit(double amount){
+		this.s.bal+=amount;
+	}
+	
+}
+public class BankDemo1 {
+
+
+	public static void main(String[] args) {
+		SavingsBank1 sbi1=new SavingsBank1();
+			sbi1.deposit(500);
+			sbi1.withdraw(2000);
+			sbi1.transfer(2000);
+			System.out.println("Name:"+sbi1.s.name+"ACC:"+sbi1.s.acc_no+"Balance:"+sbi1.s.bal);
+			System.out.println("Name:"+sbi1.p.name+"ACC:"+sbi1.p.acc_no+"Balance:"+sbi1.p.bal);
+			
+	}
+
+}
